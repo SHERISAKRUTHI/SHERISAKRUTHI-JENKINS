@@ -1,0 +1,15 @@
+version: '3.8'
+
+services:
+
+  sakruthi-ui-code: # name of app change it
+  image: sakruthi-web:appv$BUILD_NUMBER
+  build:
+
+      context: . # location of dockerfile
+
+      dockerfile: Dockerfile # name of dockerfile
+      container_name: sakruthi-web-c1 #name of the container
+      ports:
+
+      - 1203:80 # you ca use port b/w 1024 - 5000
